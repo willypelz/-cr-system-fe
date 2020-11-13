@@ -1,0 +1,180 @@
+{
+  "pages": {
+    "global": {
+      "dashboard": "Dashboard",
+      "overview": "Overview"
+    },
+    "text": {
+      "here_you_can_add_user": "Here you can add user to audit.",
+      "create_new_user": "Create New User",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "first_name": "First Name",
+      "surname": "Surname",
+      "username": "Username",
+      "street": "Street",
+      "zip": "ZIP",
+      "place": "Place",
+      "phone": "Phone",
+      "email": "Email",
+      "founding_intention": "Founding intention",
+      "company_name": "Company Name",
+      "form_of_enterprise": "Form of Enterprise",
+      "date_business_start": "Date Business Start",
+      "available_audits": "Available Audits",
+      "place_of_performance": "Place of Performance",
+      "audit": "Audit",
+      "users_audit": "User's Audit",
+      "creating": "Creating",
+      "create": "Create",
+      "user_overview": "User Overview",
+      "list_of_kmus_users": "List of kmus users",
+      "all_customers": "All customers",
+      "loading": "Loading"
+    },
+    "questionnaire": {
+      "manage_questionnaire": "Manage Questionnaire",
+      "review_questionnaire": "Review Questionnaire",
+      "select_a_questionnaire": "Please select a questionnaire",
+      "description": "Description"
+    },
+    "category": {
+      "all_category": "All Categories",
+      "manage_category": "Manage Category",
+      "select_a_category": "Please select a category",
+      "create_a_category": "Create a category",
+      "alert_no_category": "There are no categories in this questionnaire",
+      "create_new_category": "Create a new category",
+      "here": "here"
+    },
+    "section": {
+      "all_section": "All Sections",
+      "manage_section": "Manage Section",
+      "select_a_section": "Please select a section"
+    },
+    "question": {
+      "manage_question": "Manage Question",
+      "all_question": "All Questions",
+      "select_a_question": "Please select a question"
+    },
+    "answer": {
+      "add_answer": "Add Answer"
+    }
+  },
+  "components": {
+    "text": {
+      "app_details": "Application Details"
+    },
+    "input": {
+      "placeholder": {
+        "questionnaire_name": "Questionnaire Name",
+        "questionnaire_description": "Questionnaire Description",
+        "category_name": "Category Name",
+        "category_description": "Category Description",
+        "section_name": "Section Name",
+        "section_description": "Section Description",
+        "question_content": "Question Content"
+      }
+    },
+    "button": {
+      "add_questionnaire": "Add Questionnaire",
+      "add_question": "Add Question",
+      "submitting": "Submitting...",
+      "add_section": "Add Section",
+      "add_category": "Add Category",
+      "add_answer": "Add Answer",
+      "add_options": "Add",
+      "edit_questionnaire": "Edit Questionnaire",
+      "edit_question": "Edit Question",
+      "edit_section": "Edit Section",
+      "edit_category": "Edit Category",
+      "edit_answer": "Edit  Answer",
+      "submit_answer": "Submit Answer",
+      "processing": "Processing..."
+    },
+    "checkbox": {
+      "label": {
+        "langSwitch": "International"
+      }
+    },
+    "popup": {
+      "expired": {
+        "title": "Warning",
+        "desc": "Token Expired, Please login again",
+        "confirm": "Yes",
+        "cancel": "No"
+      }
+    }
+  },
+  "loadingMessage": {
+    "signin": "Verifying...",
+    "signup": "Signing up..."
+  },
+  "validation_error": {
+    "email": "Enter a valid email address.",
+    "password": "Passwords must be at least 6 characters long.",
+    "username": "Enter a valid username."
+  },
+  "message": {
+    "reset_message": "A password reset link has been sent to your email address",
+    "updated_password": "Password updated successfully"
+  },
+  "error": {
+    "email_or_password": "Invalid Email or Username",
+    "email": "Invalid email",
+    "username": "Invalid Username",
+    "password": "Invalid Password"
+  },
+  "errors": [
+    {
+      "code": "ER-0001",
+      "desc": "System Error",
+      "fix": "Please contact system admin"
+    },
+    {
+      "code": "ER-0002",
+      "desc": "Server Error",
+      "fix": "Server has encountered an internal error"
+    },
+    {
+      "code": "ER-0003",
+      "desc": "Network Error",
+      "fix": "Software caused connection abort"
+    }
+  ],
+  "network": {
+    "error": [
+      {
+        "status": "Error 400",
+        "type": "Bad Request",
+        "desc": "Your browser sent a request that this server could not understand"
+      },
+      {
+        "status": "Error 401",
+        "type": "Unauthorized",
+        "desc": "Access is denied due to invalid credentials"
+      },
+      {
+        "status": "Error 403",
+        "type": "Forbideen",
+        "desc": "You don't have permission to access"
+      },
+      {
+        "status": "Error 404",
+        "type": "Not Found",
+        "desc": "The page you are looking for does not exist"
+      },
+      {
+        "status": "Error 500",
+        "type": "Server Error",
+        "desc": "Http error 500 Internal Server Error"
+      },
+      {
+        "status": "Error 503",
+        "type": "Service Unavailable",
+        "desc": "Service temporarily unavailable"
+      }
+    ]
+  }
+}
