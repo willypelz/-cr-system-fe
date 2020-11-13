@@ -46,6 +46,16 @@ const router = new Router({
         //     name: 'userLandingPage'
         // },
         {
+            path: '/',
+            component: () => import('../home/login/Login.vue'),
+            name: 'authLogin'
+        },
+        {
+            path: '/register',
+            component: () => import('../home/register/Register.vue'),
+            name: 'authRegister'
+        },
+        {
             path: '*',
             component: () => import('../home/error/404/404.vue'),
             name: 'page-not-found'
