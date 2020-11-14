@@ -1,5 +1,7 @@
 {
-  "name": "bootstrap-vue-argon-dashboard",
+  "name": "company-review-system",
+  "author": "Asefon Michael Pelumi",
+  "description": "Company Review System",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -52,7 +54,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 10"
-  ],
-  "author": "Creative Tim - https://www.creative-tim.com/",
-  "description": "BootstrapVue Argon Dashboard"
+  ]
+
 }
