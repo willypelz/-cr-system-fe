@@ -8,14 +8,35 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@tailwindcss/ui": "^0.7.2",
     "core-js": "^3.6.5",
     "crypto-js": "^4.0.0",
-    "sass-loader": "^10.1.0",
     "vue": "^2.6.11",
     "vue-i18n": "^8.22.1",
+    "vue-loader": "^15.9.5",
     "vue-router": "^3.4.9",
-    "vuex": "^3.5.1"
+    "vuex": "^3.5.1",
+    "autoprefixer": "^9.0.0",
+    "bootstrap": "4.3.1",
+    "bootstrap-vue": "^2.5.0",
+    "chart.js": "^2.9.3",
+    "d3": "^5.7.0",
+    "datamaps": "^0.5.9",
+    "date-fns": "^1.30.1",
+    "dropzone": "^5.5.1",
+    "element-ui": "2.4.11",
+    "es6-promise": "^4.1.1",
+    "flatpickr": "^4.5.7",
+    "fuse.js": "^3.2.0",
+    "google-maps": "^3.2.1",
+    "nouislider": "^12.1.0",
+    "perfect-scrollbar": "^1.3.0",
+    "quill": "^1.3.6",
+    "sweetalert2": "^9.5.4",
+    "vee-validate": "^3.2.1",
+    "vue-chartjs": "^3.5.0",
+    "vue-clipboard2": "^0.3.0",
+    "vue-flatpickr-component": "^8.1.2",
+    "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -25,7 +46,10 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^5.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "sass-loader": "^10.1.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-plugin-component": "^1.1.0"
   },
   "eslintConfig": {
     "root": true,
@@ -45,5 +69,12 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "author": "Asefon Michael Pelumi",
+  "description": "Simple company reviewing system"
 }

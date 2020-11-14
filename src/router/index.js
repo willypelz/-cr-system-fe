@@ -1,35 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import {getUserAppData} from "../utils/cache";
 // import {getUserAppData} from "../utils/cache";
 
 
 Vue.use(Router);
-
-function isAdmin(to, from, next) {
-    var isAuthenticated = false;
-    if (getUserAppData().application_role.name == 'vendor')
-        isAuthenticated = true;
-    else
-        isAuthenticated = false;
-    if (isAuthenticated) {
-        next();
-    } else {
-        next('/404');
-    }
-}
-function isUser(to, from, next) {
-    var isAuthenticated = false;
-    if (getUserAppData().application_role.name == 'customer')
-        isAuthenticated = true;
-    else
-        isAuthenticated = false;
-    if (isAuthenticated) {
-        next();
-    } else {
-        next('/404');
-    }
-}
 
 const router = new Router({
     mode: 'history',
@@ -67,7 +41,7 @@ const router = new Router({
 
         {
             path: '/admin',
-            beforeEnter: isAdmin,
+            // beforeEnter: isAdmin,
             component: () => import('../dashboard/admin/layout/Layout.vue'),
             redirect: {
                 name: 'AdminDashboard'
@@ -87,7 +61,7 @@ const router = new Router({
          *************************/
         {
             path: '/user',
-            beforeEnter: isUser,
+            // beforeEnter: isUser,
             component: () => import('../dashboard/user/layout/Layout.vue'),
             redirect: {
                 name: 'VendorProducts'
