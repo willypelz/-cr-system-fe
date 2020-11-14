@@ -1,10 +1,8 @@
 <template>
-  <v-app>
-    <router-view></router-view>
-  </v-app>
+  <router-view></router-view>
 </template>
-<style>
-  html {
-    scroll-behavior: smooth !important;
-  }
-</style>
+
+<script>
+export default {
+}
+</script>

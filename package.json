@@ -1,21 +1,14 @@
 {
-  "name": "review-system-fe",
-  "version": "0.1.0",
+  "name": "bootstrap-vue-argon-dashboard",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "crypto-js": "^4.0.0",
-    "vue": "^2.6.11",
-    "vue-i18n": "^8.22.1",
-    "vue-loader": "^15.9.5",
-    "vue-router": "^3.4.9",
-    "vuex": "^3.5.1",
-    "autoprefixer": "^9.0.0",
     "bootstrap": "4.3.1",
     "bootstrap-vue": "^2.5.0",
     "chart.js": "^2.9.3",
@@ -33,48 +26,33 @@
     "quill": "^1.3.6",
     "sweetalert2": "^9.5.4",
     "vee-validate": "^3.2.1",
+    "vue": "^2.6.11",
     "vue-chartjs": "^3.5.0",
     "vue-clipboard2": "^0.3.0",
     "vue-flatpickr-component": "^8.1.2",
+    "vue-router": "^3.0.6",
     "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^5.0.0",
-    "vue-template-compiler": "^2.6.11",
-    "sass-loader": "^10.1.0",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
     "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-plugin-component": "^1.1.0"
+    "babel-plugin-component": "^1.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.11"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
   "postcss": {
     "plugins": {
       "autoprefixer": {}
     }
   },
-  "author": "Asefon Michael Pelumi",
-  "description": "Simple company reviewing system"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "author": "Creative Tim - https://www.creative-tim.com/",
+  "description": "BootstrapVue Argon Dashboard"
 }
