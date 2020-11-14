@@ -7,16 +7,21 @@ export default {
 
   data() {
     return {
-      first_name: ""
+      model: {
+        email: '',
+        password: '',
+        rememberMe: false
+      }
     }
   },
 
   methods: {
 
 
+    onSubmit() {
+    }
   },
   mounted() {
-
 
 
   },

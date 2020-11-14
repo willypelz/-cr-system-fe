@@ -1,26 +1,28 @@
-main.v-content {
-  padding: 2px 0 0 250px !important;
-  background-color: #f4f4f4;
+$scaleSize: 0.8;
+@keyframes zoomIn8 {
+  from {
+    opacity: 0;
+    transform: scale3d($scaleSize, $scaleSize, $scaleSize);
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.main_card{
-  background: #FFFFFF;
-  margin: 0 auto;
-  min-height: 120vh;
-  //max-width: calc(98%);
-  max-width: 99%;
-  //min-width: 90%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+.main-content .zoomIn {
+  animation-name: zoomIn8;
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition-duration: 0.5s;
-  transition-property: opacity;
-  transition-timing-function: ease;
+
+@keyframes zoomOut8 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale3d($scaleSize, $scaleSize, $scaleSize);
+  }
 }
-.fade-enter,
-.fade-leave-active {
-  opacity: 0
+
+.main-content .zoomOut {
+  animation-name: zoomOut8;
 }
