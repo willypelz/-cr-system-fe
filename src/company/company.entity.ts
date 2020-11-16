@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToOne, OneToMany, JoinColumn, AfterUpdate, BeforeUpdate } from 'typeorm';
 import { UserEntity } from '../user/user.entity';
-import { Comment } from './comment.entity';
+import { Review } from './review.entity';
 
-@Entity('article')
-export class ArticleEntity {
+@Entity('company')
+export class CompanyEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
@@ -17,9 +17,6 @@ export class ArticleEntity {
   @Column({default: ''})
   description: string;
 
-  @Column({default: ''})
-  body: string;
-
   @Column({ type: 'timestamp', default: () => "CURRENT_TIMESTAMP"})
   created: Date;
 
@@ -31,16 +28,11 @@ export class ArticleEntity {
     this.updated = new Date;
   }
 
-  @Column('simple-array')
-  tagList: string[];
+  @ManyToOne(type => UserEntity, user => user.companies)
+  creator: UserEntity;
 
-  @ManyToOne(type => UserEntity, user => user.articles)
-  author: UserEntity;
-
-  @OneToMany(type => Comment, comment => comment.article, {eager: true})
+  @OneToMany(type => Review, Review => Review.company, {eager: true})
   @JoinColumn()
-  comments: Comment[];
+  reviews: Review[];
 
-  @Column({default: 0})
-  favoriteCount: number;
 }
