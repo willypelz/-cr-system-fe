@@ -21,10 +21,7 @@ export default {
 
   methods: {
     onSubmit() {
-      const payload = {
-       ...this.model,
-        // role: 'admin'
-      };
+      const payload = {...this.model};
       this.$store.dispatch(REGISTER_USER, payload)
         .then((res) => {
             saveUserData(res.user);
@@ -35,11 +32,7 @@ export default {
     }
 
   },
-  mounted() {
-
-
-
-  },
+  mounted() {},
   computed: {
     // ...mapGetters(['loading', 'isCreated', 'validationErrorMessages'])
   },
