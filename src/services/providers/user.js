@@ -1,21 +1,12 @@
 import BaseHandler from '../../handler/base.handler';
 
-class  UserSettingProvider  extends BaseHandler {
-	getUserSettings(payload) {
-		return this.query('/user-settings/'+payload+'/user');
+class  UserProvider  extends BaseHandler {
+	register(payload) {
+		return this.post('/users',  payload)
 	}
-	getUserSetting(payload) {
-		return this.query('/user-settings/'+payload);
-	}
-	saveUserSetting(payload) {
-		return this.post('/user-settings',payload)
-	}
-	deleteUserSetting(payload) {
-		return this.delete('/user-settings/'+payload)
-	}
-	editUserSetting(payload) {
-		return this.put('/user-settings/'+payload.id,payload)
-	}
+  login(payload) {
+    return this.post('/users/login',  payload)
+  }
 }
 
-export default UserSettingProvider;
+export default UserProvider;
