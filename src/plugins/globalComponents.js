@@ -1,21 +1,21 @@
-import BaseInput from '@/components/Inputs/BaseInput.vue';
-import BaseDropdown from '@/components/BaseDropdown.vue';
-import Card from '@/components/Cards/Card.vue';
-import Modal from '@/components/Modal.vue';
-import StatsCard from '@/components/Cards/StatsCard.vue';
-import BaseButton from '@/components/BaseButton.vue';
-import Badge from '@/components/Badge.vue';
-import BaseCheckbox from '@/components/Inputs/BaseCheckbox.vue';
-import BaseRadio from "@/components/Inputs/BaseRadio";
-import BaseProgress from "@/components/BaseProgress";
-import BasePagination from "@/components/BasePagination";
-import BaseAlert from "@/components/BaseAlert";
-import BaseNav from "@/components/Navbar/BaseNav";
-import BaseHeader from '@/components/BaseHeader';
+import BaseInput from '@/shared/components/Inputs/BaseInput.vue';
+import BaseDropdown from '@/shared/components/BaseDropdown.vue';
+import Card from '@/shared/components/Cards/Card.vue';
+import Modal from '@/shared/components/Modal.vue';
+import StatsCard from '@/shared/components/Cards/StatsCard.vue';
+import BaseButton from '@/shared/components/BaseButton.vue';
+import Badge from '@/shared/components/Badge.vue';
+import BaseCheckbox from '@/shared/components/Inputs/BaseCheckbox.vue';
+import BaseRadio from "@/shared/components/Inputs/BaseRadio";
+import BaseProgress from "@/shared/components/BaseProgress";
+import BasePagination from "@/shared/components/BasePagination";
+import BaseAlert from "@/shared/components/BaseAlert";
+import BaseNav from "@/shared/components/Navbar/BaseNav";
+import BaseHeader from '@/shared/components/BaseHeader';
 import { ValidationProvider, ValidationObserver } from 'vee-validate';
 import { Input, Tooltip, Popover } from 'element-ui';
 /**
- * You can register global components here and use them as a plugin in your main Vue instance
+ * You can register global shared/components here and use them as a plugin in your main Vue instance
  */
 
 const GlobalComponents = {

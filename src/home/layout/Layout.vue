@@ -26,17 +26,21 @@
           </b-row>
         </div>
         <b-navbar-nav  class="align-items-lg-center ml-lg-auto">
-          <b-nav-item to="/dashboard">
+          <b-nav-item to="/">
             <i class="ni ni-planet"></i>
             <span class="nav-link-inner--text">Home</span>
           </b-nav-item>
-          <b-nav-item to="/register">
+          <b-nav-item to="/register" v-if="!user">
             <i class="ni ni-circle-08"></i>
             <span class="nav-link-inner--text">Register</span>
           </b-nav-item>
-          <b-nav-item to="/login">
+          <b-nav-item to="/login" v-if="!user">
             <i class="ni ni-key-25"></i>
             <span class="nav-link-inner--text">Login</span>
+          </b-nav-item>
+          <b-nav-item @click="logout" v-if="user">
+            <i class="ni ni-key-25"></i>
+            <span class="nav-link-inner--text">Logout</span>
           </b-nav-item>
         </b-navbar-nav>
       </template>

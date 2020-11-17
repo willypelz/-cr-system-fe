@@ -1,4 +1,5 @@
  import validationMixin from "../../shared/mixins/validationMixin";
+ import {REGISTER_USER} from "../../store/actions/actions.type";
 
 
 export default {
@@ -7,12 +8,25 @@ export default {
 
   data() {
     return {
-      first_name: ""
+      model: {
+        username: '',
+        email: '',
+        password: '',
+        agree: false
+      }
     }
   },
 
   methods: {
-
+    onSubmit() {
+      const payload = {
+       ...this.model,
+        role: 'admin'
+      };
+      this.$store.dispatch(REGISTER_USER, payload)
+        .then((res) => {
+          console.log('eeee', res)
+        });    }
 
   },
   mounted() {

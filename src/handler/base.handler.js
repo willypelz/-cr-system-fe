@@ -1,75 +1,63 @@
 import axios from "axios";
-import {BASE_URL, APP_KEY} from "../config";
-import {getToken} from "../utils/cache";
+import {BASE_URL} from "../config";
+import {getUserData} from "../util/cache";
 
-
-if (getToken()) {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`;
+ if (getUserData()) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${getUserData().token}`;
 }
-axios.defaults.headers.common['X-Api-Key'] = `${APP_KEY}`;
 
-
-const baseHandlerLC = axios.create({
+ const baseHandler = axios.create({
     baseURL: BASE_URL,
     timeout: 1000000
 });
 
 
-baseHandlerLC.interceptors.request.use(function (config) {
+baseHandler.interceptors.request.use(function (config) {
     return config
 }, function (error) {
     return Promise.reject(error)
 });
 
-baseHandlerLC.interceptors.response.use(function (response) {
+baseHandler.interceptors.response.use(function (response) {
     return response
 }, function (error) {
     return Promise.reject(error)
 });
 
-// alert(BASE_URL)
 
 class BaseHandler {
     constructor() {
         this.axios = axios
     }
 
-    setHeader(header) {
-        baseHandlerLC.defaults.headers.common[header.key] = header.value
-        baseHandlerLC.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
-    }
 
-    query(res, params) {
-        return baseHandlerLC.get(res, params);
-    }
-
-    get(res, slug = "") {
-        return baseHandlerLC.get(`${res}/${slug}`);
+    get(res, params) {
+        return baseHandler.get(res, params);
     }
 
     post(res, params) {
-        return baseHandlerLC.post(`${res}`, params);
+        return baseHandler.post(`${res}`, params);
     }
 
     getWithBearer(res, bearer) {
         // alert(bearer)
-        return baseHandlerLC.get(`${res}`, {
+        return baseHandler.get(`${res}`, {
             headers: {'Authorization': 'Bearer ' + bearer},
         });
     }
 
     update(res, slug, params) {
-        return baseHandlerLC.put(`${res}/${slug}`, params);
+        return baseHandler.put(`${res}/${slug}`, params);
     }
 
-    /* function put to replace records in learni-calendar micro services*/
+    /* function put to replace records in company-review system*/
     put(res, params) {
-        return baseHandlerLC.put(`${res}`, params);
+        return baseHandler.put(`${res}`, params);
     }
 
-    /* function delete to remove records in learni-calendar micro services*/
+    /* function delete to remove records in company-review system*/
     delete(res, params) {
-        return baseHandlerLC.delete(res, params);
+        return baseHandler.delete(res, params);
     }
 
     request(type, url, data) {
@@ -96,5 +84,5 @@ class BaseHandler {
 
 }
 
-/*exporting the learni-calendar micro service as a module*/
+/*exporting the company review system baseHandler as a module*/
 export default BaseHandler;

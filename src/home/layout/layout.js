@@ -1,5 +1,8 @@
-import { BaseNav } from '@/components';
+import { BaseNav } from '@/shared/components';
 import { ZoomCenterTransition } from 'vue2-transitions';
+import {logoutUser} from "../../util/cache";
+import {LOGIN_USER, LOGOUT_USER} from "../../store/actions/actions.type";
+import {mapGetters} from "vuex";
 
 export default {
   components: {
@@ -9,7 +12,7 @@ export default {
   props: {
     backgroundColor: {
       type: String,
-      default: 'black'
+      default: 'black',
     }
   },
   data() {
@@ -18,13 +21,15 @@ export default {
       menuTransitionDuration: 250,
       pageTransitionDuration: 200,
       year: new Date().getFullYear(),
-      pageClass: 'login-page'
+      pageClass: 'login-page',
+      userDetails: null,
     };
   },
   computed: {
     title() {
       return `${this.$route.name} Page`;
-    }
+    },
+    ...mapGetters(['user'])
   },
   methods: {
     toggleNavbar() {
@@ -47,6 +52,18 @@ export default {
       } else {
         this.removeBackgroundColor()
       }
+    },
+    logout(){
+      this.userDetails = null;
+      this.$store.dispatch(LOGOUT_USER)
+        .then((res) => {
+            logoutUser();
+          },
+          (err) => {
+            this.errors = err.response.data.errors;
+          }
+        );
+
     }
   },
   beforeDestroy() {
@@ -63,6 +80,9 @@ export default {
       next();
     }
   },
+  mounted(){
+
+   },
   watch: {
     $route: {
       immediate: true,

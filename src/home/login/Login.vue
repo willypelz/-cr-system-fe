@@ -19,6 +19,9 @@
                                 sign in
                             </div>
                             <validation-observer v-slot="{handleSubmit}" ref="formValidator">
+                              <b-alert show dismissible variant="danger" v-if="errors">
+                                <span class="alert-text"><strong>Failed!</strong> {{errors.User}}!</span>
+                              </b-alert>
                                 <b-form role="form" @submit.prevent="handleSubmit(onSubmit)">
                                     <base-input alternative
                                                 class="mb-3"

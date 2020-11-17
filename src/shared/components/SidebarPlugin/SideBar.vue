@@ -4,7 +4,7 @@
 
             <!--Toggler-->
             <navbar-toggle-button @click.native="showSidebar">
-                
+
             </navbar-toggle-button>
             <router-link class="navbar-brand" to="/">
                 <img :src="logo" class="navbar-brand-img" alt="...">
@@ -109,7 +109,7 @@
     </nav>
 </template>
 <script>
-  import NavbarToggleButton from '@/components/NavbarToggleButton'
+  import NavbarToggleButton from '@/shared/components/NavbarToggleButton'
 
   export default {
     name: 'sidebar',
