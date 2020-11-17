@@ -43,9 +43,7 @@
   "devDependencies": {
     "@vue/cli-plugin-unit-jest": "^4.3.1",
     "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
     "babel-plugin-component": "^1.1.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
@@ -53,14 +51,10 @@
     "@vue/server-test-utils": "^1.0.3",
     "@vue/test-utils": "^1.0.3",
     "@vue/compiler-sfc": "^3.0.0-0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
     "jest": "^25.5.4",
     "jest-html-reporters": "^1.2.1",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
-    "vue-cli-plugin-vuetify": "^1.0.1",
     "vue-jest": "^3.0.5"
   },
   "postcss": {

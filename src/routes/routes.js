@@ -14,17 +14,17 @@ const routes = [
       {
         path: '/home',
         name: 'home',
-        component: () => import( '../home/companies/Companies.vue')
+        component: () => import( '../dashboard/shared/companies/Companies.vue')
       },
       {
         path: '/companies',
         name: 'companies',
-        component: () => import( '../home/companies/Companies.vue')
+        component: () => import( '../dashboard/shared/companies/Companies.vue')
       },
       {
         path: '/company/:slug',
         name: 'company',
-        component: () => import( '../home/company/Company.vue')
+        component: () => import( '../dashboard/shared/company/Company.vue')
       },
       {
         path: '/register',
