@@ -1,45 +1,47 @@
-// import {UserService} from '../../services';
-// import {
-//
-// } from "../actions/actions.type";
-// import {
-//
-// } from "../type/mutations.type";
+import {UserService} from '../../services';
+import {LOGIN_USER, LOGOUT_USER, REGISTER_USER} from "../actions/actions.type";
+import {SET_USER} from "../type/mutations.type";
 
-/*state initialization */
 const initialState = {
-  users: [],
+  user: {},
 };
 
 export const state = {...initialState};
 
-/*list of all actions methods(functions) using the async and await principle */
 const actions = {
-  // //get an admin all promotion
-  // async [GET_USER](context, payload) {
-  //   const {data} = await UmsUserService.getUser(payload);
-  //   context.commit(SET_USER, data.data);
-  //   return data;
-  // },
+  async [REGISTER_USER](context, payload) {
+    const {data} = await UserService.register(payload);
+    context.commit(SET_USER, data.user);
+    return data;
+  },
+
+  async [LOGIN_USER](context, payload) {
+    const {data} = await UserService.login(payload);
+    context.commit(SET_USER, data.user);
+    return data;
+  },
+  async [LOGOUT_USER](context) {
+    context.commit(SET_USER, '');
+  },
 };
 
 /*exporting the mutation*/
 export const mutations = {
-  // [SET_USER](state, user) {
-  //   state.user = user;
-  // },
+  [SET_USER](state, user) {
+    state.user = user;
+  },
   // [RESET_STATE](state) {
   //     state =  {...state, ...initialState};
   // }
 };
 /* setting the getters*/
 const getters = {
-  // user(state) {
-  //   return state.user;
-  // },
-  users(state) {
-    return state.users;
+  user(state) {
+    return state.user;
   },
+  // users(state) {
+  //   return state.users;
+  // },
 
 };
 
