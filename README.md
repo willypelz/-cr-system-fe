@@ -35,24 +35,3 @@ features on the review system.
 the admin registration panel has not been done due to time constrain. 
  
  
-# Demo
-
-https://github.com/willypelz/review-system-fe/blob/master/static/1.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/2.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/3.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/4.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/5.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/6.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/7.png
-
-https://github.com/willypelz/review-system-fe/blob/master/static/8.png
- 
-
- 
-
