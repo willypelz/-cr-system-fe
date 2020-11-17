@@ -35,3 +35,7 @@ features on the review system.
 the admin registration panel has not been done due to time constrain. 
  
  
+ #BUG to fix
+ 
+when admin login you need to refresh the page to be able to create company
+ 
