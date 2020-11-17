@@ -1,6 +1,6 @@
-import { BaseNav } from '@/shared/components';
-import { ZoomCenterTransition } from 'vue2-transitions';
-import {logoutUser} from "../../util/cache";
+import {BaseNav} from '@/shared/components';
+import {ZoomCenterTransition} from 'vue2-transitions';
+import {getUserData, logoutUser} from "../../util/cache";
 import {LOGIN_USER, LOGOUT_USER} from "../../store/actions/actions.type";
 import {mapGetters} from "vuex";
 
@@ -53,7 +53,7 @@ export default {
         this.removeBackgroundColor()
       }
     },
-    logout(){
+    logout() {
       this.userDetails = null;
       this.$store.dispatch(LOGOUT_USER)
         .then((res) => {
@@ -80,9 +80,9 @@ export default {
       next();
     }
   },
-  mounted(){
-
-   },
+  mounted() {
+    this.userDetails = getUserData();
+  },
   watch: {
     $route: {
       immediate: true,

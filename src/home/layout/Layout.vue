@@ -38,6 +38,10 @@
             <i class="ni ni-key-25"></i>
             <span class="nav-link-inner--text">Login</span>
           </b-nav-item>
+          <b-nav-item to="/" v-if="user">
+            <i class="ni ni-circle-08"></i>
+            <span class="nav-link-inner--text">{{(userDetails) ? userDetails.username : user.username}}</span>
+          </b-nav-item>
           <b-nav-item @click="logout" v-if="user">
             <i class="ni ni-key-25"></i>
             <span class="nav-link-inner--text">Logout</span>

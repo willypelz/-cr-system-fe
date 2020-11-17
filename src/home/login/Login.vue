@@ -9,6 +9,7 @@
                 </svg>
             </div>
         </div>
+
         <!-- Page content -->
         <b-container class="mt--8 pb-5">
             <b-row class="justify-content-center">

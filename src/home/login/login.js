@@ -29,6 +29,7 @@ export default {
         .then((res) => {
           saveUserData(res.user);
           this.$router.push({name: 'home'})
+
           },
           (err) => {
             this.errors = err.response.data.errors;

@@ -1,5 +1,6 @@
  import validationMixin from "../../shared/mixins/validationMixin";
  import {REGISTER_USER} from "../../store/actions/actions.type";
+ import {saveUserData} from "../../util/cache";
 
 
 export default {
@@ -13,7 +14,8 @@ export default {
         email: '',
         password: '',
         agree: false
-      }
+      },
+      errors: null
     }
   },
 
@@ -21,12 +23,16 @@ export default {
     onSubmit() {
       const payload = {
        ...this.model,
-        role: 'admin'
+        // role: 'admin'
       };
       this.$store.dispatch(REGISTER_USER, payload)
         .then((res) => {
-          console.log('eeee', res)
-        });    }
+            saveUserData(res.user);
+            this.$router.push({name: 'home'})        },
+          (err)=>{
+            this.errors = err.response.data.errors;
+          });
+    }
 
   },
   mounted() {
