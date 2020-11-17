@@ -28,13 +28,16 @@ For testing Ensure the backend is running on port 3000
     
 ----------
 
-###Set an admin for the application
+### Set an admin for the application
 you can change the role of a user in the user table to admin so as to see the admin
 features on the review system.
 
 the admin registration panel has not been done due to time constrain. 
  
  
- 
+# Demo
+
+<img src="https://github.com/willypelz/review-system-fe/blob/master/static/1.png?raw=true" width="64" height="64”>
+
  
 
